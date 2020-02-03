@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour {
 			animator.SetBool("IsJumping", true);
 		}
 
+		
 		if (Input.GetButtonDown("Crouch"))
 		{
 			crouch = true;
@@ -33,6 +34,7 @@ public class PlayerMovement : MonoBehaviour {
 		{
 			crouch = false;
 		}
+		
 
 	}
 
@@ -41,10 +43,12 @@ public class PlayerMovement : MonoBehaviour {
 		animator.SetBool("IsJumping", false);
 	}
 
+	
 	public void OnCrouching (bool isCrouching)
 	{
 		animator.SetBool("IsCrouching", isCrouching);
 	}
+	
 
 	void FixedUpdate ()
 	{
